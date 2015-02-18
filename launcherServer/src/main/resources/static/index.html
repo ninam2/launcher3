@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <title>Raketenwerfer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script src="https://code.angularjs.org/1.3.10/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="css/launcher.css" rel="stylesheet" type="text/css">
+</head>
+<body background="img/background.jpg">
+
+<div class="wrapper">
+    <div class="headline">
+        <h1>DREAM CHEEKY THUNDER</h1>
+
+        <!--<p>Use the menu to get some informations</p>-->
+    </div>
+    <div class="wrapper">
+        <!--<div class="menu">-->
+
+
+        <!--<ul class="menulist">-->
+        <!--<li class="menuitem" onclick="reStyle(1)">Höhe-->
+        <!--<li class="menuitem" onclick="reStyle(2)">links/rechts-->
+        <!--<li class="menuitem" onclick="reStyle(2)">Feuer-->
+        <!--<li class="menuitem" onclick="reStyle(3)">aus-->
+        <!--</ul>-->
+        <!--</div>-->
+
+        <div ng-app="launcherApplication" ng-controller="launcherWebController">
+            <!--Befehle: <input type="text" ng-model="ctl" ng-change="executeCommand()"/>-->
+            <!--<br/>-->
+
+
+            <div class="main">
+                <h1>Der Raketenwerfer</h1>
+
+                <p>
+
+                    <img id="controller" src="img/gameboy.png" alt="retro gameboycontroller" usemap="#gameboymap">
+                    <map name="gameboymap">
+                        <area ng-click="executeCommand('a')"
+                              alt="left"
+                              title="left"
+                              ng-model="command"
+                              shape="rect"
+                              coords="95,189,80,204"/>
+                        <area ng-click="executeCommand('w')"
+                              alt="up"
+                              title="up"
+                              shape="rect"
+                              coords="94,174,108,186"
+                              style="outline:none;"
+                              target="_self"/>
+                        <area ng-click="executeCommand('d')"
+                              alt="right"
+                              title="right"
+                              shape="rect"
+                              coords="123,186,109,199"
+                              style="outline:none;"
+                              target="_self"/>
+                        <area ng-click="executeCommand('s')"
+                              alt="down"
+                              title="down"
+                              shape="rect"
+                              coords="95,215,108,200"
+                              style="outline:none;"
+                              target="_self"/>
+                        <area ng-click="executeCommand(' ')"
+                              alt="fire"
+                              title="fire"
+                              shape="poly"
+                              coords="185,189,196,192,200,196,199,201,195,206,190,211,184,208,180,203,180,197"
+                              style="outline:none;"
+                              target="_self"/>
+                        <!--<area ng-click="executeCommand('x')"-->
+                        <!--alt="off"-->
+                        <!--title="off"-->
+                        <!--shape="poly"-->
+                        <!--coords="208,189,214,177,226,179,227,188,223,195,214,198"-->
+                        <!--style="outline:none;"-->
+                        <!--target="_self"/>-->
+                    </map>
+            </div>
+
+
+        </div>
+        <!--<div class="erklaerung">-->
+        <!--<h3>Product Description</h3>-->
+
+        <!--<p>-->
+        <!--Welcome to launcher control!<br>-->
+        <!--Press...<br>-->
+        <!--1 Button to hit target one<br>-->
+        <!--2 Button to hit target two<br>-->
+        <!--3 Button to hit target three<br>-->
+        <!--4 Button to hit target four<br>-->
+        <!--t Button to hit all targets<br>-->
+        <!--up Button to move Launcher up<br>-->
+        <!--down Button to move Launcher down<br>-->
+        <!--left Button to move Launcher left<br>-->
+        <!--right Button to move Launcher right<br>-->
+        <!--left red Button to move to zero-position<br>-->
+        <!--space Button to launch<br>-->
+        <!--x Button to exit program<br>-->
+        <!--</p>-->
+        <!--</div>-->
+    </div>
+    <div class="footer">
+        <script> document.write(new Date().toDateString()); </script>
+    </div>
+</div>
+</body>
+</html>
