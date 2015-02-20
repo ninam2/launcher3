@@ -4,7 +4,7 @@ angular.module('launcherApplication', ['ngResource'])
     .controller('launcherWebController', function($scope, $resource){
 
         // ng-resource for backend-communication (submit commands)
-        var resource = $resource("http://localhost:8080/nina/launcher",{}, {'submit':   {method:'POST'}});
+        var resource = $resource("http://localhost:9090/nina/launcher",{}, {'submit':   {method:'POST'}});
 
         // handler for click-events
         $scope.executeCommand = function(command) {

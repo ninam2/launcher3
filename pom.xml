@@ -6,6 +6,7 @@
     <modules>
         <module>launcherclient</module>
         <module>launcherServer</module>
+        <module>JenkinsJSON</module>
     </modules>
     <packaging>pom</packaging><!---->
     <parent>

@@ -1,14 +1,14 @@
 package de.ninam.projects.launcher.web;
 
 import de.ninam.projects.launcher.console.Launcher;
-import de.ninam.projects.launcher.core.LauncherControl;
-import de.ninam.projects.launcher.targets.Target;
-import de.ninam.projects.launcher.targets.Targets;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+        import de.ninam.projects.launcher.core.LauncherControl;
+        import de.ninam.projects.launcher.targets.Target;
+        import de.ninam.projects.launcher.targets.Targets;
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+        import org.springframework.context.annotation.Bean;
+        import org.springframework.context.annotation.ComponentScan;
+        import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "de.ninam.projects")

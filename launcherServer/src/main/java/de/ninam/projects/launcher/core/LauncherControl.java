@@ -79,6 +79,9 @@ public class LauncherControl {
             case '4':
                 launcherService.autoShoot(Targets.four);
                 break;
+            case 'o':
+                launcherService.autoShoot(Targets.teamOne);
+                break;
             case 't':
                 launcherService.autoShoot(Targets.one);
                 launcherService.autoShoot(Targets.two);

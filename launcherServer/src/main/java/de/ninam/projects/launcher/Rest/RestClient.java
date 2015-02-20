@@ -9,7 +9,8 @@ public class RestClient {
       RestTemplate restClient = new RestTemplate();
         CommandWrapper requestObject = new CommandWrapper();
         requestObject.setCommand('w');
-        restClient.postForObject("http://localhost:8080/nina/launcher", requestObject, Void.class);
+        restClient.postForObject("http://localhost:9090/nina/launcher", requestObject, Void.class);
+        //restClient.getForObject("http://localhost:8080/job/test-project/de.ninam.projects$launcher/api/json",  );
     }
 
 }

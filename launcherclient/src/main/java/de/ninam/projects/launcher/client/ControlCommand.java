@@ -1,12 +1,13 @@
 package de.ninam.projects.launcher.client;
 
-
 public enum ControlCommand {
     LEFT('a'),
     RIGHT('d'),
     UP('w'),
     DOWN('s'),
-    LAUNCH(' '),;
+    LAUNCH(' '),
+    ZERO('0'),
+    blabla('d');
 
     private Character command;
 

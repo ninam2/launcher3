@@ -1,6 +1,7 @@
 package de.ninam.projects.launcher.web;
 
 import de.ninam.projects.launcher.core.LauncherControl;
+import de.ninam.projects.launcher.web.model.CommandWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.MediaType;
@@ -18,13 +19,23 @@ public class LauncherWebController {
     private LauncherControl launcherControl;
 
 
-    @RequestMapping(value = "/launcher", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/launcherOLD", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
     public void executeCommands(@RequestBody char[] commands) {
 
         for (char command : commands) {
+            System.out.println(command);
             launcherControl.init();
             launcherControl.executeCommand(command);
         }
+
+    }
+
+    @RequestMapping(value = "/launcher", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public void executeCommands(@RequestBody CommandWrapper commandWrapper) {
+
+
+        launcherControl.init();
+        launcherControl.executeCommand(commandWrapper.getCommand());
 
     }
 /*

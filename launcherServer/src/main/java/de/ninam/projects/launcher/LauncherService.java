@@ -68,7 +68,7 @@ public class LauncherService {
      * zero position.
      */
     public void zero() {
-        execute(CMD_DOWN, 3000);
+        execute(CMD_DOWN, 6000);
         execute(CMD_LEFT, 6000);
     }
 
