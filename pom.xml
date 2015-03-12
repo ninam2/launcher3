@@ -4,11 +4,12 @@
     <artifactId>launcher</artifactId>
     <version>0.1-SNAPSHOT</version>
     <modules>
+        <module>JenkinsJSON</module>
         <module>launcherclient</module>
         <module>launcherServer</module>
-        <module>JenkinsJSON</module>
     </modules>
-    <packaging>pom</packaging><!---->
+    <packaging>pom</packaging>
+    <!---->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
