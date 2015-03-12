@@ -1,8 +1,10 @@
+package de.ninam.projects.launcher.execute.business;
+
 import de.ninam.projects.launcher.client.ControlCommand;
 import de.ninam.projects.launcher.client.LauncherClient;
 import org.springframework.web.client.RestTemplate;
 
-public class Application {
+public class localApplication {
 
     public static void main(String args[]) {
         LauncherClient launcherClient = new LauncherClient();
@@ -13,7 +15,7 @@ public class Application {
         System.out.println("Color:   " + page.getColor());
         if (!"blue".equals(page.getColor())) {
 
-            for (int i = 1; i <= 30; i++) {
+            for (int i = 1; i <= 24; i++) {
                 launcherClient.control(ControlCommand.RIGHT);
             }
             launcherClient.control(ControlCommand.UP, ControlCommand.LAUNCH, ControlCommand.ZERO);
@@ -35,3 +37,4 @@ public class Application {
 
 
 }
+

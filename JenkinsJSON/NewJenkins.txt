@@ -1,0 +1,37 @@
+package de.ninam.projects.launcher.Jenkins;
+
+import de.ninam.projects.launcher.execute.business.domain.Page;
+import de.ninam.projects.launcher.client.ControlCommand;
+import de.ninam.projects.launcher.client.LauncherClient;
+import org.springframework.web.client.RestTemplate;
+
+public class NewJenkins {
+
+    public static void main(String args[]) {
+        LauncherClient launcherClient = new LauncherClient();
+        RestTemplate restClient = new RestTemplate();
+        Page page = restClient.getForObject("http://localhost:8080/job/test-project/de.ninam.projects$launcherServer/api/json", Page.class);
+
+        System.out.println("Name:    " + page.getName());
+        System.out.println("Color:   " + page.getColor());
+        if (!"blue".equals(page.getColor())) {
+
+            for (int i = 1; i <= 24; i++) {
+                launcherClient.control(ControlCommand.RIGHT);
+            }
+            System.out.println("team1");
+            //launcherClient.control(ControlCommand.UP, ControlCommand.LAUNCH, ControlCommand.ZERO);
+
+        } else {
+            for (int i = 1; i <= 12; i++) {
+                launcherClient.control(ControlCommand.RIGHT);
+            }
+            System.out.println("team2");
+            launcherClient.control(ControlCommand.UP, ControlCommand.LAUNCH, ControlCommand.ZERO);
+        }
+
+
+    }
+
+
+}
